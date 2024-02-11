@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/controlpanel.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/logo.ico' %}">
+      <link rel="stylesheet" href="{% static 'css/boobstrap.css' %}">
+
+        <title>My Password</title>
+    </head>
+    <body id="body-pd">
+<!-- ===== IONICONS ===== -->
+
+
+
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="https://kit.fontawesome.com/6515ed74e0.js" crossorigin="anonymous"></script>
+
+
+
+        <div class="l-navbar" id="navbar">
+          
+            <nav class="nav">
+                <div>
+                    <div class="nav__brand">
+                        <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                        <h4 class="nav__logo"> My Password</h4>
+
+                    </div>
+                    <div class="nav__list">
+                      
+                        <a href="#" class="nav__link">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                            <span class="nav__name">Passwords</span>
+                        </a>
+                      
+                        <a href="#" class="nav__link">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="nav__name">Manual</span>
+                        </a>
+                      
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link">
+                    <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+        <h1>Passwords -- {{usuario.name}} </h1>
+        <br>
+        <h5> Tu constraseñas:</h5>
+
+        <!-- ===== WEB ===== -->
+    <br>
+
+      <div class="form-group">
+          <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+          <input type="password" class="form-control password-input" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+          <span id="passwordIcon"></span>
+          <span id="passwordLength" class="color-indicator">0</span> Characters
+      </div>
+
+
+
+      
+      <!-- ===== MAIN JS ===== -->
+      <script src="{% static 'js/controlpanel.js' %}"></script>
+      
+    </body>
+</html>
